@@ -10,7 +10,7 @@ module.exports = new Script({
 
     start: {
         receive: (bot) => {
-            return bot.say('Hi! I\'m Rachel Leigh Walker\'s Bot!')
+            return bot.say('Hi! I\'m Rachel Walker\'s Personal Bot!')
                 .then(() => 'askName');
         }
     },
@@ -36,11 +36,11 @@ module.exports = new Script({
     },
     
       askq: {
-        prompt: (bot) => bot.say('Test loop 3 Back fill with resume data'),
+        prompt: (bot) => bot.say('Would you like to see Rachel\'s resume?'),
         receive: (bot, message) => {
             const q = message.text;
             return bot.setProp('q', q)
-                .then(() => bot.say(`If you have any more questions you can contact Rachel directly at xxx-xxx-xxxx`))
+                .then(() => bot.say(`ftp://68.10.140.89/pub/R-WalkerResume.pdf`))
                 .then(() => 'speak');
         }
     },
