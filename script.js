@@ -27,11 +27,11 @@ Is that OK? %[Yes](postback:yes) %[No](postback:no)`))
     },
     
     askhow: {
-        prompt: (bot) => bot.say('Would you like to see my resume?'),
+        prompt: (bot) => bot.say('Would you like to see my picture?'),
         receive: (bot, message) => {
             const how = message.text;
             return bot.setProp('how', how)
-                .then(() => bot.say(`ok great, Let me get that for you!`))
+                .then(() => bot.say('\n![rachel](https://raw.githubusercontent.com/gavinelster59/EstherBot/blob/master/img/rachel2.jpg'))
                 .then(() => 'askq');
         }
     },
