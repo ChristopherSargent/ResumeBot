@@ -10,7 +10,7 @@ module.exports = new Script({
 
     start: {
         receive: (bot) => {
-            return bot.say('Hi! I\'m Rachel\'s Bot!')
+            return bot.say('Hi! I\'m Rachel Leigh Walker\'s Bot!')
                 .then(() => 'askName');
         }
     },
@@ -20,8 +20,7 @@ module.exports = new Script({
         receive: (bot, message) => {
             const name = message.text;
             return bot.setProp('name', name)
-                .then(() => bot.say(`Great! I'll call you ${name}
- Is that OK? %[Yes](postback:yes) %[No](postback:no)`))
+                .then(() => bot.say(`Very cool! I'll call you ${name}`))
                 .then(() => 'askhow');
         }
     },
@@ -37,11 +36,11 @@ module.exports = new Script({
     },
     
       askq: {
-        prompt: (bot) => bot.say('Have you had any thoughts on how you plan to approach your first few weeks in the job?'),
+        prompt: (bot) => bot.say('Test loop 3 Back fill with resume data'),
         receive: (bot, message) => {
             const q = message.text;
             return bot.setProp('q', q)
-                .then(() => bot.say(`I'd love to talk more about that, if you'd like to carry on please type CONTINUE`))
+                .then(() => bot.say(`If you have any more questions you can contact Rachel directly at xxx-xxx-xxxx`))
                 .then(() => 'speak');
         }
     },
