@@ -25,6 +25,25 @@ Is that OK? %[Yes](postback:yes) %[No](postback:no)`))
                 .then(() => 'finish');
         }
     },
+    askhow: {
+        prompt: (bot) => bot.say('Do you have a start date yet for the new role?'),
+        receive: (bot, message) => {
+            const how = message.text;
+            return bot.setProp('how', how)
+                .then(() => bot.say(`ok great, I can follow again in a few weeks if you like`))
+                .then(() => 'askq');
+        }
+    },
+    
+        askq: {
+        prompt: (bot) => bot.say('Have you had any thoughts on how you plan to approach your first few weeks in the job?'),
+        receive: (bot, message) => {
+            const q = message.text;
+            return bot.setProp('q', q)
+                .then(() => bot.say(`I'd love to talk more about that, if you'd like to carry on please type CONTINUE`))
+                .then(() => 'speak');
+        }
+    },
 
     finish: {
         receive: (bot, message) => {
