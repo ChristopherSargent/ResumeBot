@@ -20,7 +20,7 @@ module.exports = new Script({
         receive: (bot, message) => {
             const name = message.text;
             return bot.setProp('name', name)
-                .then(() => bot.say(`Very cool! I'll call you ${name}`))
+                .then(() => bot.say(`Very cool! It is very nice to meet you ${name}`))
                 .then(() => 'askhow');
         }
     },
