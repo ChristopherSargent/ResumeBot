@@ -25,6 +25,7 @@ Is that OK? %[Yes](postback:yes) %[No](postback:no)`))
                 .then(() => 'askhow');
         }
     },
+    
     askhow: {
         prompt: (bot) => bot.say('Do you have a start date yet for the new role?'),
         receive: (bot, message) => {
@@ -35,7 +36,7 @@ Is that OK? %[Yes](postback:yes) %[No](postback:no)`))
         }
     },
     
-        askq: {
+      askq: {
         prompt: (bot) => bot.say('Have you had any thoughts on how you plan to approach your first few weeks in the job?'),
         receive: (bot, message) => {
             const q = message.text;
