@@ -21,17 +21,17 @@ module.exports = new Script({
             const name = message.text;
             return bot.setProp('name', name)
                 .then(() => bot.say(`Great! I'll call you ${name}
-Is that OK? %[Yes](postback:yes) %[No](postback:no)`))
+ Is that OK? %[Yes](postback:yes) %[No](postback:no)`))
                 .then(() => 'askhow');
         }
     },
     
     askhow: {
-        prompt: (bot) => bot.say('Would you like to see my picture?'),
+        prompt: (bot) => bot.say('Would you like to see my Linkedin profile?'),
         receive: (bot, message) => {
             const how = message.text;
             return bot.setProp('how', how)
-                .then(() => bot.say('https://github.com/gavinelster59/EstherBot/blob/master/img/rachel2.jpg'))
+                .then(() => bot.say('https://www.linkedin.cin/in/rachel-walker-111787a1'))
                 .then(() => 'askq');
         }
     },
