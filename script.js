@@ -10,7 +10,7 @@ module.exports = new Script({
 
     start: {
         receive: (bot) => {
-            return bot.say('Hi! I\'m Rachel Bot!')
+            return bot.say('Hi! I\'m Rachel\'s Bot!')
                 .then(() => 'askName');
         }
     },
@@ -27,11 +27,11 @@ Is that OK? %[Yes](postback:yes) %[No](postback:no)`))
     },
     
     askhow: {
-        prompt: (bot) => bot.say('Do you have a start date yet for the new role?'),
+        prompt: (bot) => bot.say('Would you like to see my resume?'),
         receive: (bot, message) => {
             const how = message.text;
             return bot.setProp('how', how)
-                .then(() => bot.say(`ok great, I can follow again in a few weeks if you like`))
+                .then(() => bot.say(`ok great, Let me get that for you!`))
                 .then(() => 'askq');
         }
     },
