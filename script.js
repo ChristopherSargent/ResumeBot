@@ -26,7 +26,7 @@ module.exports = new Script({
     },
     
     askhow: {
-        prompt: (bot) => bot.say('Would you like to see my Linkedin profile?'),
+        prompt: (bot) => bot.say('Would you like to see Rachel\'s Linkedin profile?'),
         receive: (bot, message) => {
             const how = message.text;
             return bot.setProp('how', how)
