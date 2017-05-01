@@ -31,7 +31,7 @@ module.exports = new Script({
         receive: (bot, message) => {
             const how = message.text;
             return bot.setProp('how', how)
-                .then(() => bot.say('https://www.linkedin.cin/in/rachel-walker-111787a1'))
+                .then(() => bot.say('https://www.linkedin.com/in/rachel-walker-111787a1'))
                 .then(() => 'askq');
         }
     },
