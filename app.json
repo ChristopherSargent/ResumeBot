@@ -3,7 +3,7 @@
   "description": "Rachel, bot.",
   "keywords": ["rachel", "bot", "express"],
   "website": "https://google.com",
-  "repository": "https://github.com/gavinelster59/EstherBot/",
+  "repository": "https://github.com/gavinelster59/EstherBot",
   "logo": "http://github.com/gavinelster59/EstherBot/blob/master/img/rachel2.jpg",
   "env": {
     "SMOOCH_APP_TOKEN": {
