@@ -13,7 +13,7 @@ module.exports = new Script({
 
     start: {
         receive: (bot) => {
-            return bot.say('So you want to learn about Rachel Leigh Walker? Just say HELLO to get started.')
+            return bot.say('In order to help you best can you please let me know if you are an EMPLOYEE or COMPANY?')
                 .then(() => 'speak');
         }
     },
@@ -67,5 +67,5 @@ module.exports = new Script({
                 .then(processMessage);
         }
     }
-});
+    });
 
