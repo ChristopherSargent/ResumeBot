@@ -40,7 +40,7 @@ module.exports = new Script({
         receive: (bot, message) => {
             const q = message.text;
             return bot.setProp('q', q)
-                .then(() => bot.say(`ftp://68.10.140.89/pub/R-WalkerResume.pdf`))
+                .then(() => bot.say('https://raw.githubusercontent.com/gavinelster59/RachelBot/master/img/R-WalkerResume.pdf'))
                 .then(() => 'speak');
         }
     },
