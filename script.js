@@ -36,7 +36,7 @@ module.exports = new Script({
     },
     
       askq: {
-        prompt: (bot) => bot.say('Would you like to see Rachel\'s resume?'),
+        prompt: (bot) => bot.say('Would you like to see Christopher\'s resume?'),
         receive: (bot, message) => {
             const q = message.text;
             return bot.setProp('q', q)
