@@ -40,7 +40,7 @@ module.exports = new Script({
         receive: (bot, message) => {
             const q = message.text;
             return bot.setProp('q', q)
-                .then(() => bot.say('https://github.com/ChristopherSargent/ResumeBot/edit/master/img/CAS-Resume-2020-Rev1.2.pdf'))
+                .then(() => bot.say('https://raw.githubusercontent.com/ChristopherSargent/ResumeBot/master/img/CAS-Resume-2020-Rev1.2.pdf'))
                 .then(() => 'speak');
         }
     },
