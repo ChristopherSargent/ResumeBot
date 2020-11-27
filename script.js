@@ -10,7 +10,7 @@ module.exports = new Script({
 
     start: {
         receive: (bot) => {
-            return bot.say('Hi! I\'m Rachel Walker\'s Personal Bot!')
+            return bot.say('Hi! I\'m Christopher Sargent\'s Personal Bot!')
                 .then(() => 'askName');
         }
     },
@@ -26,11 +26,11 @@ module.exports = new Script({
     },
     
     askhow: {
-        prompt: (bot) => bot.say('Would you like to see Rachel\'s Linkedin profile?'),
+        prompt: (bot) => bot.say('Would you like to see Christopher\'s Linkedin profile?'),
         receive: (bot, message) => {
             const how = message.text;
             return bot.setProp('how', how)
-                .then(() => bot.say('https://www.linkedin.com/in/rachel-walker-111787a1'))
+                .then(() => bot.say('https://www.linkedin.com/pub/christopher-sargent/1b/530/391'))
                 .then(() => 'askq');
         }
     },
@@ -40,7 +40,7 @@ module.exports = new Script({
         receive: (bot, message) => {
             const q = message.text;
             return bot.setProp('q', q)
-                .then(() => bot.say('https://raw.githubusercontent.com/gavinelster59/RachelBot/master/img/R-WalkerResume.pdf'))
+                .then(() => bot.say('https://raw.githubusercontent.com/ChristopherSargent/ResumeBot/edit/master/img/CAS-Resume-2020-Rev1.2.pdf'))
                 .then(() => 'speak');
         }
     },
